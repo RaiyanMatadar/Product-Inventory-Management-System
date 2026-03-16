@@ -82,6 +82,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Managment System</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -90,15 +92,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         body {
             min-height: 100vh;
-            background: #0a0a0a;
-            color: #e8e8e8;
-            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #f5f4f0;
+            font-family: 'DM Mono', monospace;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
-            padding: 2rem;
+            gap: 1.2rem;
+            padding: 3rem 2rem;
         }
 
         form {
@@ -106,34 +107,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             max-width: 420px;
             display: flex;
             flex-direction: column;
-            gap: 0.85rem;
-            background: #111111;
-            border: 1px solid #1f1f1f;
-            border-radius: 16px;
+            gap: 0.75rem;
+            background: #ffffff;
+            border-radius: 12px;
             padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 32px rgba(0,0,0,0.05);
         }
 
         input {
             width: 100%;
-            background: #0a0a0a;
-            border: 1px solid #2a2a2a;
-            border-radius: 8px;
+            background: #fafaf8;
+            border: 1px solid #efefec;
+            border-radius: 7px;
             padding: 0.75rem 1rem;
-            color: #e8e8e8;
-            font-size: 0.9rem;
+            color: #2a2a2a;
+            font-size: 0.82rem;
             font-family: inherit;
             outline: none;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
 
         input::placeholder {
-            color: #444;
+            color: #bbb;
             text-transform: capitalize;
         }
 
         input:focus {
-            border-color: #444;
-            box-shadow: 0 0 0 3px rgba(255,255,255,0.04);
+            border-color: #ccc;
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.04);
         }
 
         input[type="number"]::-webkit-inner-spin-button,
@@ -145,20 +146,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             margin-top: 0.4rem;
             width: 100%;
             padding: 0.8rem;
-            background: #e8e8e8;
-            color: #0a0a0a;
+            background: #2a2a2a;
+            color: #f5f4f0;
             border: none;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
+            border-radius: 7px;
+            font-size: 0.82rem;
+            font-weight: 500;
             font-family: inherit;
+            letter-spacing: 0.04em;
             cursor: pointer;
-            letter-spacing: 0.02em;
             transition: background 0.2s, transform 0.1s;
         }
 
         button:hover {
-            background: #ffffff;
+            background: #111;
         }
 
         button:active {
@@ -166,24 +167,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         a {
-            color: #0a0a0a;
-            font-size: 0.9rem;
-            text-decoration: none;
-            letter-spacing: 0.02em;
-            font-weight: 600;
-            font-family: inherit;
-            background: #e8e8e8;
-            padding: 0.8rem;
-            border-radius: 8px;
+            display: block;
             width: 100%;
             max-width: 420px;
+            padding: 0.8rem;
+            background: #ffffff;
+            color: #2a2a2a;
+            font-size: 0.82rem;
+            font-weight: 500;
+            font-family: inherit;
+            letter-spacing: 0.04em;
+            text-decoration: none;
             text-align: center;
-            transition: background 0.2s, transform 0.1s;
-            display: block;
+            border-radius: 7px;
+            border: 1px solid #efefec;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            transition: background 0.2s, border-color 0.2s, transform 0.1s;
         }
 
         a:hover {
-            background: #ffffff;
+            background: #fafaf8;
+            border-color: #ddd;
         }
 
         a:active {
